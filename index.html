@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Etablissement scolaire - Gestion</title>
+<meta name="theme-color" content="#1a3d7c">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./assets/icon-192.png">
+<link rel="apple-touch-icon" href="./assets/icon-192.png">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header class="topbar">
+  <img src="./assets/school-logo.png" alt="Logo" onerror="this.src='./assets/elimu-logo.png'">
+  <div class="titles"><h1 id="school-name">Etablissement scolaire</h1><small id="app-subtitle">Gestion scolaire complete</small><small class="brand-mark">ELIMU</small></div>
+  <span id="status-pill" class="status-pill offline">Hors ligne</span>
+</header>
+<main id="app"></main>
+<nav class="tabbar" id="tabbar"></nav>
+
+<script src="./config.js"></script>
+<script src="./storage.js"></script>
+<script src="./api.js"></script>
+<script src="./sync.js"></script>
+<script src="./app.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js"));
+}
+</script>
+</body>
+</html>
