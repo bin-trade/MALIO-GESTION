@@ -2,7 +2,7 @@
 // L'URL Apps Script est stockee localement (localStorage) et modifiable depuis l'ecran
 // "Configuration" sans jamais editer ce fichier ni le dupliquer ailleurs.
 window.ELIMU_CONFIG = {
-  appsScriptUrl: "https://script.google.com/macros/s/AKfycbxAlmsSKWDBK1H09lQJQi6wOuRxt68us62sl-Aay9Wg2QFdjbR_VNBhiqNiTJcmAKhWXQ/exec",
+  appsScriptUrl: "https://script.google.com/macros/s/AKfycbyhDhOfoU3maJ8NyDbi5cctmzf2yvf7P1e2fKFzoiW9g9fwH--nT7ahAML9HvE0_jx7ig/exec",
   schoolId: "ELIMU_SCH_001",
   role: "GESTIONNAIRE",
   cacheVersion: "v2"
@@ -28,7 +28,7 @@ window.ELIMU_setManagerAccessCode = function (value) {
 window.ELIMU_getAppsScriptUrl = function () {
   try {
     const saved = localStorage.getItem(ELIMU_URL_STORAGE_KEY);
-    if (saved && saved !== "https://script.google.com/macros/s/AKfycbwaRvnQJQnZMpVxT0XV0CZtcmlfnORivmaKvyX9Z3kh5MSt-MFnnm2w3XzG39d_63U/exec") return saved;
+    if (saved && saved !== "https://script.google.com/macros/s/AKfycbyhDhOfoU3maJ8NyDbi5cctmzf2yvf7P1e2fKFzoiW9g9fwH--nT7ahAML9HvE0_jx7ig/exec") return saved;
   } catch (e) {}
   return window.ELIMU_CONFIG.appsScriptUrl;
 };
@@ -36,4 +36,5 @@ window.ELIMU_getAppsScriptUrl = function () {
 window.ELIMU_setAppsScriptUrl = function (url) {
   localStorage.setItem(ELIMU_URL_STORAGE_KEY, url.trim());
 };
+
 

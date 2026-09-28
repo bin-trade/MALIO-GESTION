@@ -14,6 +14,7 @@ const ELIMU_Api = {
       action,
       schoolId: window.ELIMU_CONFIG.schoolId,
       role: window.ELIMU_CONFIG.role,
+      accessCode: window.ELIMU_getManagerAccessCode ? window.ELIMU_getManagerAccessCode() : "",
       payload: payload || {}
     });
     let lastError;
